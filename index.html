@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+  Fieldhouse Lite — free one-page template for coached gyms & strength clubs.
+  Free for personal and commercial use. Attribution appreciated.
+  Full version (live day-by-day timetable, five classes, coaches, prices,
+  find-us page, four colour packs, JSON data layer, Astro): see README.md.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fieldhouse Lite : free strength club template</title>
+<meta name="description" content="Fieldhouse Lite is a free one-page HTML template for coached gyms and strength clubs. Condensed poster type, real-people photography. Full Astro version available.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,400..800&family=Albert+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Fieldhouse</a>
+    <a class="btn" href="#book">Book a free session</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-img"><img src="img/hero.jpg" alt="Members mid-session on the club floor, one on the rings behind" fetchpriority="high"></div>
+  <div class="wrap">
+    <h1>Strength training, properly&nbsp;coached.</h1>
+    <p class="h-sub">Small coached classes, two coaches, one room in Dyeworks Yard, Alderton. Your first session is free.</p>
+    <div class="h-cta">
+      <a class="btn onhero" href="#book">Book a free session</a>
+      <a class="btn ghost" href="#classes">See the classes</a>
+    </div>
+  </div>
+</section>
+
+<!-- three of the five classes: the full week-by-week timetable engine is in the paid theme -->
+<section class="roster" id="classes">
+  <div class="wrap">
+    <h2>What we coach</h2>
+    <div class="rrow">
+      <div class="ph"><img src="img/class-strength.jpg" alt="A member pressing a loaded barbell with a spotter behind"></div>
+      <div>
+        <h3>Strength</h3>
+        <p>Squat, press, pull. The main event, coached rep by rep.</p>
+      </div>
+      <span class="r-meta">60 min &middot; 6 a week</span>
+    </div>
+    <div class="rrow">
+      <div class="ph"><img src="img/class-foundations.jpg" alt="A member focused before lifting at the barbell rack in the training floor"></div>
+      <div>
+        <h3>Foundations</h3>
+        <p>Your first six sessions. Barbell basics, one movement at a time.</p>
+      </div>
+      <span class="r-meta">60 min &middot; beginners</span>
+    </div>
+    <div class="rrow">
+      <div class="ph"><img src="img/class-engine.jpg" alt="The training floor: rack, dumbbells and barbell in an old brick-walled gym"></div>
+      <div>
+        <h3>Engine</h3>
+        <p>Rowers, sleds, carries. Simple movements, hard work.</p>
+      </div>
+      <span class="r-meta">45 min &middot; drop in</span>
+    </div>
+  </div>
+</section>
+
+<section class="room">
+  <div class="wrap">
+    <div class="rm-grid">
+      <div class="ph"><img src="img/room-squat.jpg" alt="A member locked out in an overhead squat in the training space"></div>
+      <div class="rm-tx">
+        <h2>One room. No machines row.</h2>
+        <p>Racks, bars, plates, sleds and mats in an old dye works. <b>Every class is closely capped</b> so a coach sees every rep you do. No mirrors, no sales desk, no contract to escape.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="price">
+  <div class="wrap">
+    <p class="p-cost">&pound;64<small>a month, unlimited classes</small></p>
+    <p class="p-desc">One membership, one price. <b>Pause or cancel monthly, no joining fee.</b> Your first session is free.</p>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div>
+      <h2>Book your free session</h2>
+      <p class="bk-lede">Tell us who you are. <b>We reply the same day</b> with a confirmed spot, usually within the hour.</p>
+    </div>
+    <div>
+      <form class="bform" id="bookForm" novalidate>
+        <label for="bkName">Your name</label>
+        <input type="text" id="bkName" name="name" placeholder="Sam Taylor" required>
+        <label for="bkEmail">Email</label>
+        <input type="email" id="bkEmail" name="email" placeholder="you@example.com" required>
+        <button class="btn" type="submit">Book a free session</button>
+        <p class="f-note">Demo form: nothing is sent. In the shipped theme this posts to your form endpoint.</p>
+      </form>
+      <div class="bk-ok" id="bkOk">
+        <b>See you at the yard.</b>
+        <span>We will email you a confirmed spot. Bring water and normal trainers, everything else is here.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="fword">Fieldhouse</p>
+    <div class="foot-slim">
+      <p class="f-addr">Unit 2, Dyeworks Yard, Alderton AL3 6QN &middot; <a href="tel:+441632960218">01632 960 218</a> &middot; <a href="mailto:hello@fieldhousestrength.co.uk">hello@fieldhousestrength.co.uk</a></p>
+    </div>
+    <p class="fs-info">&copy; Fieldhouse Strength Club 2026 &middot; A fictional club. Demo theme by Mike Smith Design. Photography is placeholder, replace for production. Full theme with live timetable: see README.md.</p>
+  </div>
+</footer>
+
+<script src="lenis.min.js"></script>
+<script>
+const STATIC = location.search.includes('static');
+if (STATIC) document.documentElement.classList.add('static');
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!STATIC && !REDUCED && window.Lenis) {
+  const lenis = new Lenis({ lerp: .09 });
+  (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })();
+}
+const form = document.getElementById('bookForm');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const nm = document.getElementById('bkName');
+  const em = document.getElementById('bkEmail');
+  if (!nm.value.trim()) { nm.reportValidity && nm.reportValidity(); return; }
+  if (!em.value.trim() || !em.checkValidity()) { em.reportValidity && em.reportValidity(); return; }
+  form.style.display = 'none';
+  document.getElementById('bkOk').classList.add('show');
+});
+</script>
+</body>
+</html>
