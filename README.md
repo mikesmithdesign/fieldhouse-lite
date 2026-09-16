@@ -32,3 +32,5 @@ page, a find-us page, four colour packs, and JSON-driven content (rebrand
 the whole site from one data folder) — built as an Astro 7 project.
 
 → see `Themes/Fitness/astro` (fieldhouse-astro)
+
+Get the full theme: https://mikesmithdesign.gumroad.com/l/fieldhouse-astro-theme
