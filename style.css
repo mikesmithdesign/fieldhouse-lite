@@ -131,3 +131,6 @@ h1,h2,h3{font-family:var(--display);color:var(--ink);font-weight:700;line-height
 html.static *,html.static *::before,html.static *::after{transition:none!important;animation:none!important}
 @media(prefers-reduced-motion:reduce){
   .hero h1,.hero .h-sub,.hero .h-cta{animation:none!important}}
+
+/* the template credit should read as a link, like the other footer links */
+a[href*="mikesmithdesign.co.uk"]{text-decoration:underline;text-underline-offset:2px}
