@@ -37,6 +37,4 @@ with their own detail sections, a coaches page, a full prices and booking
 page, a find-us page, four colour packs, and JSON-driven content (rebrand
 the whole site from one data folder), built as an Astro 7 project.
 
-→ see `Themes/Fitness/astro` (fieldhouse-astro)
-
-Get the full theme: https://mikesmithdesign.gumroad.com/l/fieldhouse-astro-theme
+→ [Fieldhouse, the full Astro theme for gyms and fitness studios](https://mikesmithdesign.co.uk/themes/fieldhouse) (£25)
